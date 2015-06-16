@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link type="text/css" rel="stylesheet" href="indexpage.css"/>
-	<script src="jquery-1.11.3.min.js"></script>
+	<script src="jquery-1.11.4.min.js"></script>
 	<script type="text/javascript" src="indexpage.js"></script>
 	<title>Index Page</title>
 </head>
