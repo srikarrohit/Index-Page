@@ -1,39 +1,57 @@
-.container-fluid{
+body{
     background-color: rgba(105, 89, 205, 0.4);
     background-image: url("http://free13k.com/server13/photos/2mXD0X6d3tW4_M~/142620_Nature-Wallpapers-2-Resolution-1366x768-HD_1366x768.jpg");
 }
-
+#main{ 
+  width: 950px;
+  height: 380px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: auto;
+  margin-top: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+}
 img{
-    height: 110px;
-	width: 110px;
-	border-radius: 15px;
-	padding: 10px;
-  	margin: 7.5px 10px 7.5px 48px; 
+    height: 80px;
+    width: 80px;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+}
+td{
+   padding: 10px 45px 10px 45px;
+}
+#back{
+   position: fixed;
+   margin: -220px 0 0 80px;
+}
+#fwd{
+   position: fixed;
+   margin: -220px 0 0 1200px;
 }
 #down{
-     margin: 25px 0 10px 0; 
+     margin-top: 105px;
      background-color: rgba(65, 86, 197, 0.5);
+     width: 100%;
      border-radius: 20px;
      border-width: 3px;
      border-color:  rgba(72, 118, 255, 0.8);
      border-style: solid;
 }
-#lft-ex{
-     margin-left: -75px;
+#ftr{
+    margin: auto;
 }
-#lft-in{
-     margin-left: -25px;
+.down{
+    padding: 5px 80px 5px 80px;
 }
-#rgt-ex{
-     margin-left: 171px;
-}
-#rgt-in{
-     margin-left: 121px;
-}
-
-
 img:hover {
-    height: 110px;
-	width: 110px;
-	padding: 7.5px;
+  height: 85px;
+  width: 85px;
+  padding: 7.5px;
+}
+#pag1{
+   margin: -380px 0 0 1000px; 
+}
+#pag2{
+   margin: -380px 0 0 2000px; 
 }
