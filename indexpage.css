@@ -1,12 +1,10 @@
 body{
-  background-color: rgba(105, 89, 205, 0.4);
-    background-image: url("http://free13k.com/server13/photos/2mXD0X6d3tW4_M~/142620_Nature-Wallpapers-2-Resolution-1366x768-HD_1366x768.jpg");
+    background-image: url("images/bgimage.png");
 }
 #main{ 
   width: 950px;
   height: 380px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
   margin: auto;
   margin-top: 50px;
   overflow: hidden;
