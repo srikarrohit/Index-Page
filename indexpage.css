@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(105, 89, 205, 0.4);
+  background-color: rgba(105, 89, 205, 0.4);
     background-image: url("http://free13k.com/server13/photos/2mXD0X6d3tW4_M~/142620_Nature-Wallpapers-2-Resolution-1366x768-HD_1366x768.jpg");
 }
 #main{ 
@@ -31,12 +31,12 @@ td{
 }
 #down{
      margin-top: 105px;
-     background-color: rgba(65, 86, 197, 0.5);
+    // background-color: rgba(65, 86, 197, 0.5);
      width: 100%;
      border-radius: 20px;
      border-width: 3px;
      border-color:  rgba(72, 118, 255, 0.8);
-     border-style: solid;
+    border-style: solid;
 }
 #ftr{
     margin: auto;
@@ -54,4 +54,9 @@ img:hover {
 }
 #pag2{
    margin: -380px 0 0 2000px; 
+}
+.home:before{
+	font-family: FontAwesome;
+	content: "\f015";
+	text-decoration:none;
 }
