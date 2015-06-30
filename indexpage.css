@@ -1,9 +1,12 @@
-body { 
-  background: url("images/bgimage.png") no-repeat center center fixed; 
+html { 
+  background: url("images/bgimage.png") no-repeat center bottom fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+body{
+overflow-y:hidden;
 }
 #main{ 
   width: 950px;
@@ -31,12 +34,12 @@ td{
 }
 #down{
      margin-top: 105px;
-    background-color: rgba(65, 86, 197, 0.3);
+//    background-color: rgba(65, 86, 197, 0.3);
      width: 100%;
-     border-radius: 20px;
-     border-width: 3px;
-     border-color:  rgba(72, 118, 255, 0.5);
-    border-style: solid;
+//     border-radius: 20px;
+ //    border-width: 3px;
+  //   border-color:  rgba(72, 118, 255, 0.5);
+ //   border-style: solid;
 }
 #ftr{
     margin: auto;
@@ -59,7 +62,33 @@ img:hover {
 	content: "\f015";
 	text-decoration:none;
 }
+<<<<<<< HEAD
 .text:before{font-size:19px;
   font-family: "Times New Roman", Times, serif;
   text-align: center;
 }
+=======
+i
+{
+color:white;
+background-color:#e74c3c;
+font-size:50px!important;
+width:100px;
+height:100px;
+text-align:center;
+}
+i::before
+{
+position:relative;
+top:20%;
+}
+.text
+{
+font-size:12px;
+color:white;
+text-decoration:none;
+text-align:center;
+position:relative;
+bottom:5%;
+}
+>>>>>>> 27fafc4a237b6bac332876d5edc5dec4a01d35d4
