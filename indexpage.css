@@ -15,10 +15,8 @@ body {
   white-space: nowrap;
 }
 img{
-    height: 80px;
-    width: 80px;
-    border-radius: 20px;
-    padding: 10px 10px 10px 10px;
+    height: 140px;
+    width: 140px;
 }
 td{
    padding: 10px 45px 10px 45px;
@@ -47,9 +45,8 @@ td{
     padding: 5px 80px 5px 80px;
 }
 img:hover {
-  height: 85px;
-  width: 85px;
-  padding: 7.5px;
+  height: 150px;
+  width: 150px;
 }
 #pag1{
    margin: -380px 0 0 1000px; 
@@ -61,4 +58,8 @@ img:hover {
 	font-family: FontAwesome;
 	content: "\f015";
 	text-decoration:none;
+}
+.text:before{font-size:19px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
 }
