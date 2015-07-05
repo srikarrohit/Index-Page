@@ -10,8 +10,8 @@ overflow-y:hidden;
 overflow-x:hidden;
 }
 #main{ 
-  width: 950px;
-  height: 380px;
+  width: 71%;
+  height: 71vh;
   border-radius: 10px;
   margin: auto;
   margin-top: 50px;
@@ -48,9 +48,9 @@ opacity:1!important;
 	top:30.5%;
 }
 #down{
-     margin-top: 105px;
+     margin: 0 auto;
 //    background-color: rgba(65, 86, 197, 0.3);
-     width: 100%;
+     width: 71%;
 //     border-radius: 20px;
  //    border-width: 3px;
   //   border-color:  rgba(72, 118, 255, 0.5);
