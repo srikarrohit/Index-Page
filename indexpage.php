@@ -7,10 +7,42 @@
 	<script src="jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="indexpage.js"></script>
 	<title>Index Page</title>
+	<script>
+function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET", "search.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+function submit(x){
+	document.getElementById('getdata').value=document.getElementById(x).innerHTML;
+	document.getElementById('searchform').submit();
+}
+</script>
+</head>
 </head>
 <body>
 
  <div id="main"> 
+ <table id="searchpage">
+ <thead></thead>
+	  <tbody>
+	       <tr>
+	       <td>	<form name="searchform" id="searchform" method="POST" action=""> 
+First name: <input name="stdname" id="getdata" type="text" onkeyup="showHint(this.value)"></td>
+<td><div id="txtHint"></div></td>
+		</tr>
+	</tbody>
+</table>
   <table id="pag0">
 	  <thead></thead>
 	  <tbody>
@@ -126,3 +158,18 @@
  </div>
 </body>
 </html>
+<?php
+$server="localhost";
+$user="root";
+$pwd="ragasree";
+$db="students_1415";
+if(isset($_POST['stdname']) && !empty($_POST['stdname']))
+{
+$conn = new mysqli($server, $user, $pwd, $db);
+$name=$_POST['stdname'];
+$sql = "SELECT * FROM users WHERE fullname='$name'";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+echo $row["username"];
+}
+?>
