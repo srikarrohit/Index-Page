@@ -50,7 +50,7 @@ opacity:1!important;
 #down{
      margin: 0 auto;
 //    background-color: rgba(65, 86, 197, 0.3);
-     width: 71%;
+     width: 100%;
 //     border-radius: 20px;
  //    border-width: 3px;
   //   border-color:  rgba(72, 118, 255, 0.5);
@@ -103,4 +103,18 @@ text-decoration:none;
 text-align:center;
 position:relative;
 bottom:5%;
+}
+@media screen and (max-width: 400px) {
+#main{ 
+  width: 100%; 
+}
+html
+{
+background-repeat: no-repeat;
+}
+}
+@media screen and (min-device-width: 1400px){
+#main{ 
+  width: 78%!important; 
+}
 }
