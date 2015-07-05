@@ -2,14 +2,19 @@
 <html>
 <head>
 	<link type="text/css" rel="stylesheet" href="indexpage.css"/>
+	<link type="text/css" rel="stylesheet" href="animate.css"/>
 	<link type="text/css" rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css"/>
 	<script src="jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="indexpage.js"></script>
+	<script src="wow.min.js"></script>
+<script>
+ new WOW().init();
+</script>
 	<title>Index Page</title>
 </head>
 <body>
 
- <div id="main"> 
+ <div class="main fadeInDown animated"> 
   <table id="pag0">
 	  <thead></thead>
 	  <tbody>
@@ -94,8 +99,8 @@
  </div>
    <div id="back"><img id="previous" src="images/previous.png" style="width: 60px; height: 60px; padding: 0;"/></div>
    <div id="fwd"><img id="next" src="images/next.png" style="width: 60px; height: 60px; padding: 0; "/></div>
- <div id="down">
-   <table id="ftr">
+ <div class="dow wow fadeInDown animated">
+   <table class="ftr wow bounce animated" data-wow-delay="1s">
        <thead></thead>
        <tbody>
            <tr>
