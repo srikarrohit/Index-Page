@@ -23,12 +23,12 @@ img{
     width: 120px;
 }
 td{
-   padding: 0px 41px 10px 30px;
+   padding: 0px 41px 0px 30px;
 }
 #back{
    position: fixed;
    left:13%;
-	top:30.5%;
+	top:33vh;
 }
 #back img,#fwd img{
 	cursor:pointer;
@@ -45,7 +45,7 @@ opacity:1!important;
 #fwd{
    position: fixed;
    right:13%;
-	top:30.5%;
+	top:33vh;
 }
 #down{
      margin: 0 auto;

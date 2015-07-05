@@ -36,11 +36,7 @@ function submit(x){
 </head>
 </head>
 <body>
-<<<<<<< HEAD:indexpage.html
- <div  id="main" class="fadeInDown animated"> 
-=======
-
- <div id="main"> 
+ <div  id="main" class="fadeInDown animated">  
  <table id="searchpage">
  <thead></thead>
 	  <tbody>
@@ -51,7 +47,6 @@ First name: <input name="stdname" id="getdata" type="text" onkeyup="showHint(thi
 		</tr>
 	</tbody>
 </table>
->>>>>>> 8f7d76d741f80d27bf08f2d0ee8e359aabb607cf:indexpage.php
   <table id="pag0">
 	  <thead></thead>
 	  <tbody>
@@ -73,8 +68,8 @@ First name: <input name="stdname" id="getdata" type="text" onkeyup="showHint(thi
 	         <td><a href=""><img src="images/oir.png" /></a></td>
 	         <td><a href=""><img src="images/placements.png" /></a></td>
 	         <td><a href=""><img src="images/nptel.png" /></a></td>
-	         <td><a href=""><img src="images" /></a></td>
-	         <td><a href=""><img src="images(3,5).jpg" /></a></td>
+	         <td><a href=""><img src="images/departments.png" /></a></td>
+	         <td><a href=""><img src="images/clubs.png" /></a></td>
 	       </tr>
 	       
 	  </tbody>
@@ -83,25 +78,25 @@ First name: <input name="stdname" id="getdata" type="text" onkeyup="showHint(thi
 	  <thead></thead>
 	  <tbody>
 	       <tr>
-	         <td><a href=""><img src="images(3,1).jpg" /></a></td>
-	         <td><a href=""><img src="images(3,2).jpg" /></a></td>
-	         <td><a href=""><img src="images(3,3).jpg" /></a></td>
-	         <td><a href=""><img src="images(3,4).jpg" /></a></td>
-	         <td><a href=""><img src="images(3,5).jpg" /></a></td>
+	         <td><a href=""><img src="images/aerospace.png" /></a></td>
+	         <td><a href=""><img src="images/appliedmechanics.png" /></a></td>
+	         <td><a href=""><img src="images/biotechnology.png" /></a></td>
+	         <td><a href=""><img src="images/chemical.png" /></a></td>
+	         <td><a href=""><img src="images/civil.png" /></a></td>
 	       </tr>
 	       <tr>
-	         <td><a href=""><img src="images(1,1).jpg" /></a></td>
-	         <td><a href=""><img src="images(1,2).jpg" /></a></td>
-	         <td><a href=""><img src="images(1,3).jpg" /></a></td>
-	         <td><a href=""><img src="images(1,4).jpg" /></a></td>
-	         <td><a href=""><img src="images(1,5).jpg" /></a></td>
+	         <td><a href=""><img src="images/chemistry.png" /></a></td>
+	         <td><a href=""><img src="images/cs.png" /></a></td>
+	         <td><a href=""><img src="images/elec.png" /></a></td>
+	         <td><a href=""><img src="images/ed.png" /></a></td>
+	         <td><a href=""><img src="images/hs.png" /></a></td>
 	       </tr>
 	       <tr>
-	         <td><a href=""><img src="images(2,1).jpg" /></a></td>
-	         <td><a href=""><img src="images(2,2).jpg" /></a></td>
-	         <td><a href=""><img src="images(2,3).jpg" /></a></td>
-	         <td><a href=""><img src="images(2,4).jpg" /></a></td>
-	         <td><a href=""><img src="images(2,5).jpg" /></a></td>
+	         <td><a href=""><img src="images/management.png" /></a></td>
+	         <td><a href=""><img src="images/maths.png" /></a></td>
+	         <td><a href=""><img src="images/mech.png" /></a></td>
+	         <td><a href=""><img src="images/metallurgy.png" /></a></td>
+	         <td><a href=""><img src="images/oceanengg.png" /></a></td>
 	       </tr>
 	       
 	  </tbody>
@@ -110,25 +105,25 @@ First name: <input name="stdname" id="getdata" type="text" onkeyup="showHint(thi
 	  <thead></thead>
 	  <tbody>
 	       <tr>
-	         <td><a href=""><img src="images(2,1).jpg" /></a></td>
-	         <td><a href=""><img src="images(2,2).jpg" /></a></td>
-	         <td><a href=""><img src="images(2,3).jpg" /></a></td>
-	         <td><a href=""><img src="images(2,4).jpg" /></a></td>
-	         <td><a href=""><img src="images(2,5).jpg" /></a></td>
+	         <td><a href=""><img src="images/amalgam.png" /></a></td>
+	         <td><a href=""><img src="images/biofest.png" /></a></td>
+	         <td><a href=""><img src="images/ceafest.png" /></a></td>
+	         <td><a href=""><img src="images/exebit.png" /></a></td>
+	         <td><a href=""><img src="images/genesis.png" /></a></td>
 	       </tr>
 	       <tr>
-	         <td><a href=""><img src="images(3,1).jpg" /></a></td>
-	         <td><a href=""><img src="images(3,2).jpg" /></a></td>
-	         <td><a href=""><img src="images(3,3).jpg" /></a></td>
-	         <td><a href=""><img src="images(3,4).jpg" /></a></td>
-	         <td><a href=""><img src="images(3,5).jpg" /></a></td>
+	         <td><a href=""><img src="images/chemclave.png" /></a></td>
+	         <td><a href=""><img src="images/wavez.png" /></a></td>
+	         <td><a href=""><img src="images/internationalday.png" /></a></td>
+	         <td><a href=""><img src="images/mechanica.png" /></a></td>
+	         <td><a href=""><img src="images/eml.png" /></a></td>
 	       </tr>
 	       <tr>
-	         <td><a href=""><img src="images(1,1).jpg" /></a></td>
-	         <td><a href=""><img src="images(1,2).jpg" /></a></td>
-	         <td><a href=""><img src="images(1,3).jpg" /></a></td>
-	         <td><a href=""><img src="images(1,4).jpg" /></a></td>
-	         <td><a href=""><img src="images(1,5).jpg" /></a></td>
+	         <td><a href=""><img src="images/cfi.png" /></a></td>
+	         <td><a href=""><img src="images/nss.png" /></a></td>
+	         <td><a href=""><img src="images/vsc.png" /></a></td>
+	         <td><a href=""><img src="images/iitmsat.png" /></a></td>
+	         <td><a href=""><img src="images/astronomy.png" /></a></td>
 	       </tr>
 	       
 	  </tbody>
