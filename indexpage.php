@@ -47,9 +47,9 @@ echo "<!DOCTYPE html>
 	  <thead></thead>
 	  <tbody>
 	       <tr>
-	         <td><a href=''><img src='images/deansblog.png'/></td>
-	         <td><a href=''><img src='images/hospital.png'/></td>
-	         <td><a href=''><img src='images/moodle.png'/></td>
+	         <td><a href='#'><img src='images/deansblog.png'/></a></td>
+	         <td><a href=''><img src='images/hospital.png'/></a></td>
+	         <td><a href=''><img src='images/moodle.png'/></a></td>
 	         <td><a href=''><img src='images/academics.png' /></a></td>
 	         <td><a href=''><img src='images/cc.png' /></a></td>
 	       </tr>
