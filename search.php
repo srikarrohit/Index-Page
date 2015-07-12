@@ -16,6 +16,8 @@ $q = $_REQUEST["q"];
 
 $hint = "";
 $i=0;
+$list=[];
+$arrlen=0;
 // lookup all hints from array if $q is different from "" 
 if ($q !== "") 
 {
@@ -28,13 +30,47 @@ if ($q !== "")
 				$i++;
         if (stristr($name, $q))
 				{
-            $hint .= "<li name='suggestions' id=".$i." onclick='submit(".$i.");'>".$name."</li>"; 
+						$arrlen++;
+						$name=strtolower($name);
+						$name[0]=strtoupper($name[0]);
+						$name=rtrim($name," ");
+						for($j=0;$j<strlen($name);$j++)
+						{
+							if( $name[$j] === " " )
+							{
+								$k=$j+1;
+								$name[$k]=strtoupper($name[$k]);
+							}
+						}
+						array_push($list,$name);					
+          //  $hint .= "<li name='suggestions' class='list' id=".$i." onclick='submit(".$i.");'>".$name."</li>"; 
         }
     	}
+		/*	$l=0;
+			$m=0;
+			for($l=0;$l<$arrlen;$l++)
+			{
+				for($m=0;$m<$arrlen-$l;$l++)
+				{
+					if($list[$m][0]>$list[$m+1][0])
+					{
+						$swap=$list[$m];
+						$list[$m]=$list[$m+1];
+						$list[$m+1]=$swap;
+					}
+				}
+			}*/
+			$id=0;
+			sort($list,SORT_STRING);
+			foreach($list as $sugg)
+			{
+				$id++;
+				$hint .= "<li name='suggestions' class='list' id=".$id." onclick='submit(".$id.");'>".$sugg."</li>"; 
+			}
 			if($hint==="")
 			echo "No suggestions";
 			else
-			echo nl2br($hint);
+			echo "<ul class='ul' >".nl2br($hint)."</ul>";
 		}
 		else
 		echo "Minimum number of characters is 4";		

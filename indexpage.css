@@ -18,6 +18,15 @@ overflow-x:hidden;
   overflow: hidden;
   white-space: nowrap;
 }
+.profile
+{
+background-color:white;
+width:35%;
+height:20vh;
+margin:0 auto;
+position:relative;
+top:10vh;
+}
 img{
     height: 120px;
     width: 120px;
@@ -66,34 +75,18 @@ opacity:1!important;
   height: 85px;
   width: 85px;
 }
-#pag1{
+#pag0{
    margin: -380px 0 0 1000px; 
 }
-#pag2{
+#pag1{
    margin: -380px 0 0 2000px; 
 }
-.home:before{
-	font-family: FontAwesome;
-	content: "\f015";
-	text-decoration:none;
+#pag2{
+   margin: -380px 0 0 3000px; 
 }
 .text:before{font-size:19px;
   font-family: "Times New Roman", Times, serif;
   text-align: center;
-}
-i
-{
-color:white;
-background-color:#e74c3c;
-font-size:50px!important;
-width:100px;
-height:100px;
-text-align:center;
-}
-i::before
-{
-position:relative;
-top:20%;
 }
 .text
 {
@@ -119,4 +112,58 @@ background-repeat: no-repeat;
 }
 #fwd{right:10%;}
 #back{left:10%;}
+}
+#searchpage
+{
+min-height:58vh;
+}
+#txtHint
+{
+background-color:white;
+max-height:29vh;
+overflow-x:hidden;
+width:60%;
+margin-left:10%;
+}
+#getdata
+{
+margin-left:10%;
+width:80%;
+height:20px;
+font-size:18px;
+}
+.list
+{
+cursor:pointer;
+height:20px;
+}
+.list:hover
+{
+background-color:gray;
+}
+#searchpage
+{
+position:relative;
+top:10%;
+}
+.ul
+{
+list-style-type: none!important;
+padding: 0px;
+margin: 0px;
+}
+.fa-5x
+{
+  font-size: 15vh!important;
+  margin-left: 2%;
+  margin-top: 4%;
+}
+.pro
+{
+  padding: 0px!important;
+  padding-left: 15px!important;
+}
+#card
+{
+  padding-top: 5px!important;
 }
