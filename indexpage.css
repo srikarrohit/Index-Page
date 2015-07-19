@@ -37,7 +37,7 @@ td{
 #back{
    position: fixed;
    left:13%;
-	top:33vh;
+	top:45vh;
 }
 #back img,#fwd img{
 	cursor:pointer;
@@ -54,7 +54,9 @@ opacity:1!important;
 #fwd{
    position: fixed;
    right:13%;
-	top:33vh;
+	top:45vh;
+  z-index: 10000;
+  text-align: right;
 }
 #down{
      margin: 0 auto;
@@ -166,4 +168,100 @@ margin: 0px;
 #card
 {
   padding-top: 5px!important;
+}
+#pagesfooter {
+  position: fixed;
+  width: 100%;
+  height: 20px;
+  bottom: 124px;
+  margin-left: -10px;
+  overflow: hidden;
+}
+#pages {
+  height: 20px;
+  margin: auto;
+  text-align: center;
+}
+#pages .circle.search {
+  background-image: url(sIcon.png);
+  background-color: transparent;
+  background-size: 100% 100%;
+  border-radius: 0;
+  opacity: 0.6;
+}
+.circle {
+  float: left;
+}
+.inactiveCricle {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, .3);
+  margin-right: 7px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.activeCricle {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-right: 7px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#searchbox {
+  width: 800px;
+  height: 30px;
+  border: 0px solid;
+  z-Index: 1000;
+  margin-left: 100px;
+  opacity: 0.9;
+  margin-top: 30px;
+}
+form {
+  display: block;
+  margin-top: 0em;
+}
+#searchbox div {
+  float: left;
+}
+.searchButton {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: -112px -5px;
+  border-right: 0;
+  background-position: -112px -4px;
+}
+#searchinput {
+  width: 730px;
+  height: 30px;
+}
+#searchinput input {
+  width: 100%;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #FFF;
+  outline: none;
+}
+#searchclosebtn {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: -10px -5px;
+  border-left: 0;
 }

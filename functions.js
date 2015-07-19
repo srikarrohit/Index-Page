@@ -15,6 +15,6 @@ function showHint(str) {
     }
 }
 function submit(x){
-	document.getElementById('getdata').value=document.getElementById(x).innerHTML;
+	document.getElementById('inputtext').value=document.getElementById(x).innerHTML;
 	document.getElementById('searchform').submit();
 }

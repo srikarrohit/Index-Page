@@ -19,11 +19,21 @@ echo "<!DOCTYPE html>
 </head>
 <body>
  <div  id='main' class='fadeInDown animated'>  
- <div id='searchpage'>
- 	<form name='searchform' id='searchform' method='GET' action=''> 
- 	<input name='stdname' id='getdata' type='text' autocomplete='off' onkeyup='showHint(this.value)'>
+<div id='searchbox' class='searchbox'>
+	<form name='searchform' id='searchform' method='GET' action=''>
+		<div class='searchButton'><img src='images/search.png' style='height:20px;width:20px;padding:5px'></img></div>
+		<div id='searchinput'>
+			<input name='stdname' id='inputtext' type='text' autocomplete='off' onkeyup='showHint(this.value)'>
+		</div>
+		<div id='searchclosebtn'></div>
+		<div id='hideInput' style='display: none;'>
+			<input type='hidden' name='cx' value='partner-pub-6463892505403669:7150588345'>
+			<input type='hidden' value='utf-8' name='ie'>
+		</div>
 	</form>
- 	<div id='txtHint'></div>";
+ 	<div id='txtHint'></div>
+	<div class='suggest' style='display: none;'>
+	</div>";
 	if( isset($_GET['stdname']) && !empty($_GET['stdname']) )
 	{
 		$conn = new mysqli($server, $user, $pwd, $db);
@@ -148,6 +158,14 @@ echo "<!DOCTYPE html>
        </tbody>
    </table>
  </div>
+ <div id='pagesfooter'>
+		<div id='pages' style='width: 56px;'>
+			<div id='1' class='circle search activeCricle'></div>
+        	<div id='2' class='circle inactiveCricle'></div>
+        	<div id='3' class='circle inactiveCricle'></div>
+        	<div id='4' class='circle inactiveCricle'></div>
+       	</div>
+  </div>
 </body>
 </html>";
 ?>
