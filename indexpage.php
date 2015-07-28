@@ -18,15 +18,23 @@ echo "<!DOCTYPE html>
 </head>
 </head>
 <body>
- <div  id='main' class='fadeInDown animated'>  
+ <div  id='main' class='fadeInDown animated'>
+ 	<div id='topBar' style='height:20px;'>
+			<span id='clock' class='cloc'>";
+			date_default_timezone_set('Asia/Kolkata');
+			echo date("h:i A");
+			echo "</span>
+	</div>
+
+
+
 <div id='searchbox' class='searchbox'>
 	<form name='searchform' id='searchform' method='GET' action=''>
-		<div class='searchButton'><img src='images/search.png' style='height:20px;width:20px;padding:5px'></img></div>
-		<div id='searchinput'>
-			<input name='stdname' id='inputtext' type='text' autocomplete='off' onkeyup='showHint(this.value)'>
+				<div id='searchinput'>
+			<i class='fa fa-search'></i>
+			<input name='stdname' id='inputtext' type='text' autocomplete='off' onkeyup='showHint(this.value,event)'>
 		</div>
-		<div id='searchclosebtn'></div>
-		<div id='hideInput' style='display: none;'>
+				<div id='hideInput' style='display: none;'>
 			<input type='hidden' name='cx' value='partner-pub-6463892505403669:7150588345'>
 			<input type='hidden' value='utf-8' name='ie'>
 		</div>
@@ -47,9 +55,13 @@ echo "<!DOCTYPE html>
 				<table id='card'>
 				<tbody >
 				<tr><td class='pro' rowspan='3'><i class='fa fa-user fa-5x'></i></td>
-				<div id='right'><td class='pro' ><i class='fa fa-user'></i>".$row["fullname"]."</td>
-				<tr><td class='pro' ><i class='fa fa-envelope'></i>".$row["email"].
-				"</td></tr><tr><td class='pro' ><i class='fa fa-map-marker'></i>".$row["hostel"]."</td></tr></div><tr><td class='pro' ><span id='roll'>".$row["username"]."</span></td></tr></tbody></table></div>";
+				<div id='right'><td class='pro' ><i class='fa fa-user' style='padding-right:6px'></i>".$row["fullname"]."</td>
+				<tr><td class='pro' ><i class='fa fa-envelope' style='padding-right:5px'></i>".$row["email"].
+				"</td></tr><tr><td class='pro' ><i class='fa fa-map-marker' style='padding-left:5px;padding-right:6px'></i>".$row["hostel"]."</td></tr></div><tr><td class='pro' ><span id='roll'>".$row["username"]."</span></td>
+				</tr>
+				</tbody>
+				</table>
+				</div>";
 	}
  echo "
  </div>
@@ -102,7 +114,7 @@ echo "<!DOCTYPE html>
 	         <td><a href=''><img src='images/maths.png' /></a></td>
 	         <td><a href=''><img src='images/mech.png' /></a></td>
 	         <td><a href=''><img src='images/metallurgy.png' /></a></td>
-	         <td><a href=''><img src='images/oceanengg.png' /></a></td>
+	         <td><a href=''><img src='images/physics.png' /></a></td>
 	       </tr>
 	       
 	  </tbody>

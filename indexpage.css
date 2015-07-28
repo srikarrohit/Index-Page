@@ -1,5 +1,4 @@
 html { 
-  background: url("images/bgimage2.png") no-repeat center bottom fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7,6 +6,7 @@ html {
 }
 body{
 overflow-y:hidden;
+background-color:#ecf0f1;
 overflow-x:hidden;
 }
 #main{ 
@@ -20,13 +20,24 @@ overflow-x:hidden;
 }
 .profile
 {
-background-color:white;
-width:35%;
+background-color: darkturquoise;
+width:43%;
 height:20vh;
-margin:0 auto;
+margin-left:150px;
 position:relative;
 top:10vh;
 }
+#topBar {
+    text-align: center;
+}
+.cloc {
+    position: absolute;
+    font-family: 'Helvetica Neue';
+    color: #fff;
+    font-size: 11.75pt;
+    margin-top: -30px;
+    margin-left:-40px;
+  }
 img{
     height: 120px;
     width: 120px;
@@ -37,7 +48,7 @@ td{
 #back{
    position: fixed;
    left:13%;
-	top:45vh;
+	top:35vh;
 }
 #back img,#fwd img{
 	cursor:pointer;
@@ -54,7 +65,7 @@ opacity:1!important;
 #fwd{
    position: fixed;
    right:13%;
-	top:45vh;
+	top:35vh;
   z-index: 10000;
   text-align: right;
 }
@@ -78,7 +89,7 @@ opacity:1!important;
   width: 85px;
 }
 #pag0{
-   margin: -380px 0 0 1000px; 
+   margin: -420px 0 0 1000px; 
 }
 #pag1{
    margin: -380px 0 0 2000px; 
@@ -115,12 +126,9 @@ background-repeat: no-repeat;
 #fwd{right:10%;}
 #back{left:10%;}
 }
-#searchpage
-{
-min-height:58vh;
-}
 #txtHint
 {
+z-index:1000;
 background-color:white;
 max-height:29vh;
 overflow-x:hidden;
@@ -141,7 +149,7 @@ height:20px;
 }
 .list:hover
 {
-background-color:gray;
+background-color:#ecf0f1;
 }
 #searchpage
 {
@@ -167,7 +175,9 @@ margin: 0px;
 }
 #card
 {
-  padding-top: 5px!important;
+  padding-top: 6px!important;
+  font-size:16px;
+  font-family: "Times New Roman", Times, serif;
 }
 #pagesfooter {
   position: fixed;
@@ -183,7 +193,7 @@ margin: 0px;
   text-align: center;
 }
 #pages .circle.search {
-  background-image: url(sIcon.png);
+  background-image: url(images/sIcon.png);
   background-color: transparent;
   background-size: 100% 100%;
   border-radius: 0;
@@ -218,50 +228,37 @@ margin: 0px;
 }
 
 #searchbox {
-  width: 800px;
-  height: 30px;
+  min-height:58vh;
   border: 0px solid;
   z-Index: 1000;
-  margin-left: 100px;
+  margin-left: 150px;
   opacity: 0.9;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 form {
   display: block;
   margin-top: 0em;
 }
 #searchbox div {
-  float: left;
-}
-.searchButton {
-  background-color: #fff;
-  width: 30px;
-  height: 30px;
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
-  background-repeat: no-repeat;
-  background-position: -112px -5px;
-  border-right: 0;
-  background-position: -112px -4px;
+//  float: left;
 }
 #searchinput {
-  width: 730px;
+  width: 80%;
   height: 30px;
+	background-color:white;
+	border-radius:20px;
+}
+.fa-search{
+padding:0 0 0 5px;
 }
 #searchinput input {
-  width: 100%;
+  width: 90%;
   height: 28px;
   padding: 0;
   border: 1px solid #FFF;
   outline: none;
 }
-#searchclosebtn {
-  background-color: #fff;
-  width: 30px;
-  height: 30px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-repeat: no-repeat;
-  background-position: -10px -5px;
-  border-left: 0;
+.list
+{
+padding:2px 0 2px 2px;
 }

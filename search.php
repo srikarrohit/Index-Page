@@ -13,7 +13,6 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 // get the q parameter from URL
 $q = $_REQUEST["q"];
-
 $hint = "";
 $i=0;
 $list=[];
@@ -65,6 +64,7 @@ if ($q !== "")
 			foreach($list as $sugg)
 			{
 				$id++;
+				//$sugg=Bold(stristr($sugg,$q),$sugg);
 				$hint .= "<li name='suggestions' class='list' id=".$id." onclick='submit(".$id.");'>".$sugg."</li>"; 
 			}
 			if($hint==="")
@@ -76,4 +76,7 @@ if ($q !== "")
 		echo "Minimum number of characters is 4";		
 }
 // Output "no suggestion" if no hint was found or output correct values 
+function Bold($text, $str) {
+    return str_replace($text, "<strong>".$text."</strong>", $str);
+}
 ?>
