@@ -3,6 +3,7 @@ var count =0;
 function showHint(str,e) {
 		if(e.keyCode == 40)
 		{
+		 console.log(document.getElementById('txtHint').scrollTop);
 		if(count!=0)
 		document.getElementById(count).style.cssText = 'background-color:white;';
 		if(count>6)
@@ -13,8 +14,10 @@ function showHint(str,e) {
 		}
 		else if(e.keyCode == 38){
 		document.getElementById(count).style.cssText = 'background-color:white;';
-	//	if(
+		var scroll = document.getElementById('txtHint').scrollTop;
 		count--;
+		if(scroll>=24 && count>1)
+		document.getElementById('txtHint').scrollTop-=24;
     document.getElementById('inputtext').value=document.getElementById(count).innerHTML;
 		if(count!=0)
 		document.getElementById(count).style.cssText = 'background-color:#ecf0f1;';
