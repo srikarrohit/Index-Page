@@ -4,11 +4,14 @@ $server="localhost";
 $user="root";
 $pwd="ragasree";
 $db="students_1415";
-$conn = new mysqli($server, $user, $pwd, $db);
-$sql = "SELECT * FROM users";
-$result = mysqli_query($conn, $sql);
+$conn = new PDO("mysql:host=$server;dbname=$db", $user, $pwd);
+// set the PDO error mode to exception
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$stmt = $conn->prepare("SELECT * FROM users");
+//$stmt->setFetchMode(PDO::FETCH_ASSOC);
+$stmt->execute();
 $a=[];
-while($row = mysqli_fetch_assoc($result)) {
+while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 	array_push($a,$row["fullname"]);
 }
 // get the q parameter from URL

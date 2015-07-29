@@ -44,13 +44,26 @@ echo "<!DOCTYPE html>
 	</div>";
 	if( isset($_GET['stdname']) && !empty($_GET['stdname']) )
 	{
-		$conn = new mysqli($server, $user, $pwd, $db);
-		$name=$_GET['stdname'];
-		$sql = "SELECT * FROM users WHERE fullname='$name'";
-		$result = mysqli_query($conn, $sql);
-		$row = mysqli_fetch_assoc($result);
-		if($row["email"]=="")
-		$row["email"]=strtolower($row["username"])."@smail.iitm.ac.in";
+		 try{
+      $conn = new PDO("mysql:host=$server;dbname=$db", $user, $pwd);
+      // set the PDO error mode to exception
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      echo "Connected successfully";
+      }
+      catch(PDOException $e)
+        {
+        echo "Connection failed: " . $e->getMessage();
+        }
+    $name=$_GET['stdname'];
+    $stmt = $conn->prepare("SELECT * FROM users WHERE fullname=':name'");
+    $stmt->bindParam(':name', $name);
+    //$stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $stmt->execute();
+    $row = $stmt->fetch();
+    //$row = $result->fetch(PDO::FETCH_ASSOC)
+    echo $row["username"] ;
+    if($row["email"]=="")
+    $row["email"]=strtolower($row["username"])."@smail.iitm.ac.in";
 		echo "<div class='profile'>
 				<table id='card'>
 				<tbody >
