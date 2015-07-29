@@ -5,12 +5,15 @@ function showHint(str,e) {
 		{
 		if(count!=0)
 		document.getElementById(count).style.cssText = 'background-color:white;';
+		if(count>6)
+		document.getElementById('txtHint').scrollTop+=24;
 		count++;
 		document.getElementById('inputtext').value=document.getElementById(count).innerHTML;
 		document.getElementById(count).style.cssText = 'background-color:#ecf0f1;';
 		}
 		else if(e.keyCode == 38){
 		document.getElementById(count).style.cssText = 'background-color:white;';
+	//	if(
 		count--;
     document.getElementById('inputtext').value=document.getElementById(count).innerHTML;
 		if(count!=0)
