@@ -6,7 +6,7 @@ $db='students_1415';
 echo "<!DOCTYPE html>
 <html>
 <head>
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'/>
 	<link type='text/css' rel='stylesheet' href='indexpage.css'/>
 	<link type='text/css' rel='stylesheet' href='animate.css'/>
 	<link type='text/css' rel='stylesheet' href='font-awesome-4.3.0/css/font-awesome.min.css'/>
@@ -32,7 +32,7 @@ echo "<!DOCTYPE html>
 	<form name='searchform' id='searchform' method='GET' action=''>
 				<div id='searchinput'>
 			<i class='fa fa-search'></i>
-			<input name='stdname' id='inputtext' type='text' autocomplete='off' onkeyup='showHint(this.value,event)'>
+			<input name='stdname' id='inputtext' placeholder='Student Search'type='text' autocomplete='off' onkeyup='showHint(this.value,event)'>
 		</div>
 				<div id='hideInput' style='display: none;'>
 			<input type='hidden' name='cx' value='partner-pub-6463892505403669:7150588345'>
