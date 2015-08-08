@@ -1,4 +1,5 @@
 html { 
+	background-image:url("images/bg.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -6,12 +7,10 @@ html {
 }
 body{
 overflow-y:hidden;
-background-color:#ecf0f1;
 overflow-x:hidden;
 }
-#main{ 
-  width: 71%;
-  height: 71vh;
+#main{
+	width:70%; 
   border-radius: 10px;
   margin: auto;
   margin-top: 50px;
@@ -84,14 +83,33 @@ opacity:1!important;
   width: 85px;
 }
 #pag0{
-   margin: -420px 0 0 1000px; 
+   margin-top: -420px;  
+	 margin-left: calc(1000px + 5%);
 }
 #pag1{
-   margin: -380px 0 0 2000px; 
+   margin-top: -380px;
+	 margin-left: calc(2000px + 5%); 
 }
 #pag2{
-   margin: -380px 0 0 3000px; 
+   margin-top:-380px;
+	 margin-left: calc(3000px + 5%); 
 }
+/* trial */
+#pag0,#pag1,#pag2{
+display:flex;
+flex-wrap:wrap;
+width:100%;
+margin-bottom:0px;
+margin-right:0px;
+}
+#main{
+min-height:600px;
+}
+#down{
+position:fixed;
+bottom:20px;
+}
+/* trial */
 .text:before{font-size:19px;
   font-family: "Times New Roman", Times, serif;
   text-align: center;
@@ -257,21 +275,59 @@ padding:0 0 0 5px;
 {
 padding:2px 0 2px 2px;
 }
-@media screen and (max-width:400px)
+@media screen and (max-width:874px) and (min-width:702px){
+#pag0{
+   margin-top: -430px;
+}
+#pag1{
+   margin-top: -510px;
+}
+#pag2{
+   margin-top:-500px;
+}
+}
+@media screen and (min-width:588px) and (max-width:701px){
+img{
+width:100px;
+height:100px;
+}
+#pag0{
+   margin-top: -430px;
+}
+#pag1{ 
+   margin-top: -410px;
+}
+#pag2{
+   margin-top:-412px;
+}
+}
+@media screen and (min-width:500px) and (max-width:588px){
+img{
+width:80px;
+height:80px;
+}
+#pag0{ 
+   margin-top: -430px;
+}
+#pag1{ 
+   margin-top: -320px;
+}
+#pag2{
+   margin-top:-320px;
+}
+}
+
+@media screen and (max-width:500px)
 {
 #main{
 width:100%;
-height:71vh;
-}
-#main td{
-padding:0px 5px 1vh 5px!important;
 }
 img{
-height:55px!important;
-width:55px!important;
+height:70px;
+width:70px;
 }
 #down td{
-padding:0px 5px 0px 5px!important;
+padding:0px!important;
 }
 #down{
 width:100%;
@@ -287,12 +343,15 @@ width:75%;
 margin:auto;
 }
 #pag0{
-margin:-55vh 0 0 1000px;
+margin-top:-65vh;
+margin-left:(1000px + 5%);
 }
 #pag1{
-margin:-30vh 0 0 2000px;
+margin-top:-50vh;
+margin-left:calc(2000px + 5%);
 }
 #pag2{
-margin:-31vh 0 0 3000px;
+margin-top:-51vh;
+margin-left:calc(3000px + 5%);
 }
 }
