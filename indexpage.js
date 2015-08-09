@@ -5,6 +5,7 @@ $(document).ready( function() {
 			switch(page)
 			{ 
 			case 0:
+							$("#searchbox").css("opacity",1);
 		          $("#searchform").animate( {marginLeft:"-=1000px"}, 850);
 		          $("#searchinput").animate( {marginLeft:"-=1000px"}, 850);
 		          $(".profile").animate( {marginLeft:"-=1000px"}, 850);
@@ -226,6 +227,7 @@ $(document).ready( function() {
 							$("#txtHint").animate( {marginLeft:"+=100px"}, 350, function(){$("#txtHint").animate( {marginLeft:"-=100px"}, 350); }  );   
 	          	break;
 	     case 1:
+							$("#searchbox").css("opacity",0.9);
 			        $("#searchform").animate( {marginLeft:"+=1000px"}, 850);
 			        $(".profile").animate( {marginLeft:"+=1000px"}, 850);
 			        $("#searchinput").animate( {marginLeft:"+=1000px"}, 850);
