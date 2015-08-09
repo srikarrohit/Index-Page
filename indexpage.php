@@ -150,7 +150,7 @@ echo "<!DOCTYPE html>
              <td class='down'><a href='http://students.iitm.ac.in/iportal'>
 								<img src='images/iportal.png'/></a></td>
 
-             <td class='down'><a href='http://students2.iitm.ac.in/executive'>
+             <td class='down' id='end'><a href='http://students2.iitm.ac.in/executive'>
 							<img src='images/executive.png'/></a></td>
            </tr>
        </tbody>
