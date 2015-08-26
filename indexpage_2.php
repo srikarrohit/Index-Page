@@ -1,8 +1,8 @@
 <?php
 $server='localhost';
 $user='root';
-$pwd='1234';
-$db='index_page';
+$pwd='ragasree';
+$db='students_1415';
 echo "<!DOCTYPE html>
 <html>
 <head>
@@ -39,9 +39,7 @@ echo "<!DOCTYPE html>
  	<div id='txtHint'></div>
 	<div class='suggest' style='display: none;'>
 	</div>";
-	if( isset($_GET['stdname']) && !empty($_GET['stdname']) )
-	{
-		 try{
+try{
       $conn = new PDO("mysql:host=$server;dbname=$db", $user, $pwd);
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       }
@@ -49,11 +47,13 @@ echo "<!DOCTYPE html>
         {
         echo "Connection failed: " . $e->getMessage();
         }
+	if( isset($_GET['stdname']) && !empty($_GET['stdname']) )
+	{
     $name=$_GET['stdname'];
     $stmt = $conn->prepare("SELECT * FROM users WHERE fullname=:name");
     $stmt->bindParam(':name', $name);
-
     $stmt->execute();
+		$stmt1->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     if($row["email"]=="")
     $row["email"]=strtolower($row["username"])."@smail.iitm.ac.in";
@@ -84,35 +84,19 @@ echo "<!DOCTYPE html>
 	         <a class='item' href=''><img src='images/saarang.png' /></a>
 	         <a class='item' href=''><img src='images/oir.png' /></a>
 	         <a class='item' href=''><img src='images/placements.png' /></a>
-	         <a class='item' href=''><img src='images/nptel.png' /></a>
+	         <a class='it
++em' href=''><img src='images/nptel.png' /></a>
 	         <a class='item' href=''><img src='images/departments.png' /></a>
 	         <a class='item' href=''><img src='images/clubs.png' /></a>
    </div>
    <div id='pag1'>";
-					try{
-                        $conn = new PDO("mysql:host=$server;dbname=$db", $user, $pwd);
-                        // set the PDO error mode to exception
-                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                        }
-                        catch(PDOException $e)
-                        {
-                          echo "Connection failed: " . $e->getMessage();
-                        }
-						$stmt = $conn->prepare('SELECT * FROM `index` WHERE div_id="1"');
-						$stmt->setFetchMode(PDO::FETCH_ASSOC);
-						$stmt->execute();
-						while($row = $stmt->fetch())
-						{
+			$stmt1 = $conn->prepare("SELECT * FROM index WHERE div_id=1");
+			$stmt1->execute();
+						 while($row=$stmt1->fetch(PDO::FETCH_ASSOC))
+						 {
 							$image=$row["image"];
-							"<a href=''><img src=".$image."/></a>";
-						} 
-		/*			  $conn = new mysqli($server, $user, $pwd, $db);
-$sql = "SELECT * FROM index WHERE div_id=1";
-$result = $conn->query($sql);
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "<a href=''><img src=".$image."/></a>";
-    }*/
+							echo "<a href=''><img src=".$image."/></a>";
+						 }
    echo "</div>
    <div id='pag2'>
 
