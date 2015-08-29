@@ -8,6 +8,7 @@ html {
 body{
 overflow-y:hidden;
 overflow-x:hidden;
+font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 #main{
 	width:70%; 
@@ -148,6 +149,11 @@ max-height:29vh;
 overflow-x:hidden;
 width:60%;
 margin-left:10%;
+font-weight:bold;
+font-size:14px;
+}
+#txtHint ul{
+border:1px solid #bdc3c7;
 }
 #getdata
 {
@@ -261,6 +267,7 @@ form {
   height: 30px;
 	background-color:white;
 	border-radius:20px;
+	border: 1px solid #bdc3c7;
 }
 .fa-search{
 padding:0 0 0 5px;
