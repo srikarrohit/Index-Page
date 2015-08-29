@@ -78,7 +78,7 @@ echo "
   <div id='pag0'>";
 	         $query = "SELECT * FROM images WHERE div_id=0";
 						$out = mysqli_query($con,$query);
-						if (mysqli_num_rows($out)==true) {
+						if (mysqli_num_rows($out)) {
 							while($row = mysqli_fetch_assoc($out)) {
 								echo "<a href='#'><img src='".$row["image"]."'/></a>";
 							}	
@@ -87,7 +87,7 @@ echo "
    <div id='pag1'>";		
 						$query = "SELECT * FROM images WHERE div_id=1";
 						$out = mysqli_query($con,$query);
-						if (mysqli_num_rows($out)==true) {
+						if (mysqli_num_rows($out)) {
 							while($row = mysqli_fetch_assoc($out)) {
 								echo "<a href='#'><img src='".$row["image"]."'/></a>";
 							}	
@@ -96,7 +96,7 @@ echo "
    <div id='pag2'>";
 						$query = "SELECT * FROM images WHERE div_id=2";
 						$out = mysqli_query($con,$query);
-						if (mysqli_num_rows($out)==true) {
+						if (mysqli_num_rows($out)) {
 							while($row = mysqli_fetch_assoc($out)) {
 							echo "<a href='#'><img src='".$row["image"]."'/></a>";
 							}	
