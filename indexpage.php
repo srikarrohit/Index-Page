@@ -43,9 +43,7 @@ echo "<!DOCTYPE html>
 	{
 		 try{
       $conn = new PDO("mysql:host=$server;dbname=$db", $user, $pwd);
-      // set the PDO error mode to exception
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  //    echo "Connected successfully";
       }
       catch(PDOException $e)
         {
@@ -54,13 +52,11 @@ echo "<!DOCTYPE html>
     $name=$_GET['stdname'];
     $stmt = $conn->prepare("SELECT * FROM users WHERE fullname=:name");
     $stmt->bindParam(':name', $name);
-    //$stmt->setFetchMode(PDO::FETCH_ASSOC);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    //$row = $result->fetch(PDO::FETCH_ASSOC)
-  //  echo $row["username"] ;
     if($row["email"]=="")
     $row["email"]=strtolower($row["username"])."@smail.iitm.ac.in";
+		$conn = null;
 		echo "<div class='profile'>
 				<table id='card'>
 				<tbody >
@@ -73,65 +69,40 @@ echo "<!DOCTYPE html>
 				</table>
 				</div>";
 	}
- echo "
+$con = mysqli_connect($server, $user, $pwd, $db);
+		if (!$con) {
+			die("Connection failed: " . mysqli_connect_error());
+		}
+echo "
  </div>
-  <div id='pag0'>
-	         <a class='item' href='#'><img src='images/deansblog.png'/></a>
-	         <a class='item' href='#'><img src='images/hospital.png'/></a>
-	         <a class='item' href=''><img src='images/moodle.png'/></a>
-	         <a class='item' href=''><img src='images/academics.png' /></a>
-	         <a class='item' href=''><img src='images/cc.png' /></a>
-	         <a class='item' href=''><img src='images/icsr.png' /></a>
-	         <a class='item' href=''><img src='images/alumni.png' /></a>
-	         <a class='item' href=''><img src='images/t5e.png' /></a>
-	         <a class='item' href=''><img src='images/shaastra.png' /></a>
-	         <a class='item' href=''><img src='images/saarang.png' /></a>
-	         <a class='item' href=''><img src='images/oir.png' /></a>
-	         <a class='item' href=''><img src='images/placements.png' /></a>
-	         <a class='item' href=''><img src='images/nptel.png' /></a>
-	         <a class='item' href=''><img src='images/departments.png' /></a>
-	         <a class='item' href=''><img src='images/clubs.png' /></a>
-   </div>
-   <div id='pag1'>
-
-	         <a href=''><img src='images/aerospace.png' /></a>
-	         <a href=''><img src='images/appliedmechanics.png' /></a>
-	         <a href=''><img src='images/biotechnology.png' /></a>
-	         <a href=''><img src='images/chemical.png' /></a>
-	         <a href=''><img src='images/civil.png' /></a>
-
-	         <a href=''><img src='images/chemistry.png' /></a>
-	         <a href=''><img src='images/cs.png' /></a>
-	         <a href=''><img src='images/elec.png' /></a>
-	         <a href=''><img src='images/ed.png' /></a>
-	         <a href=''><img src='images/hs.png' /></a>
-
-	         <a href=''><img src='images/management.png' /></a>
-	         <a href=''><img src='images/maths.png' /></a>
-	         <a href=''><img src='images/mech.png' /></a>
-	         <a href=''><img src='images/metallurgy.png' /></a>
-	         <a href=''><img src='images/physics.png' /></a>
-   </div>
-   <div id='pag2'>
-
-	         <a href=''><img src='images/amalgam.png' /></a>
-	         <a href=''><img src='images/biofest.png' /></a>
-	         <a href=''><img src='images/ceafest.png' /></a>
-	         <a href=''><img src='images/exebit.png' /></a>
-	         <a href=''><img src='images/genesis.png' /></a>
-
-	         <a href=''><img src='images/chemclave.png' /></a>
-	         <a href=''><img src='images/wavez.png' /></a>
-	         <a href=''><img src='images/internationalday.png' /></a>
-	         <a href=''><img src='images/mechanica.png' /></a>
-	         <a href=''><img src='images/eml.png' /></a>
-
-	         <a href=''><img src='images/cfi.png' /></a>
-	         <a href=''><img src='images/nss.png' /></a>
-	         <a href=''><img src='images/vsc.png' /></a>
-	         <a href=''><img src='images/iitmsat.png' /></a>
-	         <a href=''><img src='images/astronomy.png' /></a>
-   </div>
+  <div id='pag0'>";
+	         $query = "SELECT * FROM images WHERE div_id=0";
+						$out = mysqli_query($con,$query);
+						if (mysqli_num_rows($out)==true) {
+							while($row = mysqli_fetch_assoc($out)) {
+								echo "<a href='#'><img src='".$row["image"]."'/></a>";
+							}	
+						}
+ echo " </div>
+   <div id='pag1'>";		
+						$query = "SELECT * FROM images WHERE div_id=1";
+						$out = mysqli_query($con,$query);
+						if (mysqli_num_rows($out)==true) {
+							while($row = mysqli_fetch_assoc($out)) {
+								echo "<a href='#'><img src='".$row["image"]."'/></a>";
+							}	
+						}
+	echo "</div>
+   <div id='pag2'>";
+						$query = "SELECT * FROM images WHERE div_id=2";
+						$out = mysqli_query($con,$query);
+						if (mysqli_num_rows($out)==true) {
+							while($row = mysqli_fetch_assoc($out)) {
+							echo "<a href='#'><img src='".$row["image"]."'/></a>";
+							}	
+						}
+						mysqli_close($con);
+ echo  "</div>
  </div>
    <div id='back'><img id='previous' src='images/previous.png' style='width: 60px; height: 60px; padding: 0;'/></div>
    <div id='fwd'><img id='next' src='images/next.png' style='width: 60px; height: 60px; padding: 0; '/></div>
