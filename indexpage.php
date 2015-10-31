@@ -19,12 +19,14 @@ echo "<!DOCTYPE html>
 </head>
 <body>
  <div  id='main' class='fadeInDown animated'>
- 	<div id='topBar' style='height:20px;'>
-			<span id='clock' class='cloc'>";
+	<div id='pag-1'>
+ 	<div id='topBar'>
+			<p id='clock' class='cloc'>";
 			date_default_timezone_set('Asia/Kolkata');
 			echo date("h:i A");
-			echo "</span>
+			echo "</p>
 	</div>
+
 <div id='searchbox' class='searchbox'>
 	<form name='searchform' id='searchform' method='GET' action=''>
 				<div id='searchinput'>
@@ -74,13 +76,13 @@ $con = mysqli_connect($server, $user, $pwd, $db);
 			die("Connection failed: " . mysqli_connect_error());
 		}
 echo "
- </div>
+ </div></div>
   <div id='pag0'>";
 	         $query = "SELECT * FROM images WHERE div_id=0";
 						$out = mysqli_query($con,$query);
 						if (mysqli_num_rows($out)) {
 							while($row = mysqli_fetch_assoc($out)) {
-								echo "<a href='#'><img src='".$row["image"]."'/></a>";
+								echo "<a href='#' id=".substr($row["image"],7,-4)."><img src='".$row["image"]."'/></a>";
 							}	
 						}
  echo " </div>
@@ -89,7 +91,7 @@ echo "
 						$out = mysqli_query($con,$query);
 						if (mysqli_num_rows($out)) {
 							while($row = mysqli_fetch_assoc($out)) {
-								echo "<a href='#'><img src='".$row["image"]."'/></a>";
+								echo "<a href='#'  id=".substr($row["image"],7,-4)."><img src='".$row["image"]."'/></a>";
 							}	
 						}
 	echo "</div>
@@ -98,7 +100,7 @@ echo "
 						$out = mysqli_query($con,$query);
 						if (mysqli_num_rows($out)) {
 							while($row = mysqli_fetch_assoc($out)) {
-							echo "<a href='#'><img src='".$row["image"]."'/></a>";
+							echo "<a href='#'  id=".substr($row["image"],7,-4)."><img src='".$row["image"]."'/></a>";
 							}	
 						}
 						mysqli_close($con);
@@ -129,10 +131,10 @@ echo "
  </div>
  <div id='pagesfooter'>
 		<div id='pages' style='width: 56px;'>
-			<div id='1' class='circle search activeCricle'></div>
-        	<div id='2' class='circle inactiveCricle'></div>
-        	<div id='3' class='circle inactiveCricle'></div>
-        	<div id='4' class='circle inactiveCricle'></div>
+			<div id='-1' class='circle search activeCricle'></div>
+        	<div id='-2' class='circle inactiveCricle'></div>
+        	<div id='-3' class='circle inactiveCricle'></div>
+        	<div id='-4' class='circle inactiveCricle'></div>
        	</div>
   </div>
 </body>

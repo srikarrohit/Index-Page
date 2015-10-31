@@ -70,6 +70,8 @@ if ($q !== "")
 				//$sugg=Bold(stristr($sugg,$q),$sugg);
 				$hint .= "<li name='suggestions' class='list' id=".$id." onclick='submit(".$id.");'>".$sugg."</li>"; 
 			}
+			if($hint!="")
+			$hint .= "<li name='counter' id='counter' style='display:none'>".$id."</li>";
 			if($hint==="")
 			echo "No suggestions";
 			else
